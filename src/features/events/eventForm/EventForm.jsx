@@ -21,7 +21,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
       ? updateEvent({ ...selectedEvent, ...values })
       : createEvent({
           ...values,
-          id: 'cuid()',
+          id: cuid(),
           hostedBy: 'Bob',
           attendees: [],
           hostPhotoURL: '/assets/user.png',
